@@ -26,7 +26,9 @@
     "jade": "~1.11.0",
     "mocha": "^3.0.2",
     "morgan": "~1.7.0",
+    "node-emoji": "^1.4.1",
     "nodemon": "^1.10.2",
+    "pug": "^2.0.0-beta6",
     "request": "^2.75.0",
     "serve-favicon": "~2.3.0",
     "should": "^11.1.0"
