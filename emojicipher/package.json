@@ -2,12 +2,17 @@
   "name": "emojicipher",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "6.3.0"
+  },
   "scripts": {
     "babel": "babel --version",
     "start": "node ./bin/www",
     "test": "mocha --recursive --watch --require babel-register ",
     "build:watch": "npm run build -- --watch",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
   },
   "dependencies": {
     "babel": "^6.5.2",
