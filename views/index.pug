@@ -1,18 +1,40 @@
 extends layout
 
 block content
-  h1= title
-  p [place holder]
-  p "We Love You"
+  h1.form= title
+  p.form [place holder]
+  p.form "We Love You"
+  p.form
+    i(class="em em-coffee")
+    i(class="em em-alien")
+    i(class="em em-coffee")
+    i(class="em em-alien")
+    i(class="em em-coffee")
+    i(class="em em-alien")
+    i(class="em em-alien")
+    i(class="em em-alien")
 
-  form(method="get" action="/")
-    Detect Detect Language:
-    br
-    input(type="text" name="translate" value="" placeholder="emoji or text")
-    br
-    input(type="submit" value="Submit")
-    br
-    Translation Translation:
-    br
-    output(type="text" name="translate" value="" placeholder="emoji or text")
-    br
+  if textDetected 
+
+    form.encode
+      div.form
+        Label Emoji Encode:
+      div.form
+        input(type="text" name="encode" value="" placeholder="emoji or text")
+        input.encode(type="submit" value="Submit")
+      div.form
+        Label Translation:
+        output.results(type="text" name="encode" value="" placeholder="emoji or text")
+
+  else 
+
+    form.decode
+      div.form
+        Label Emoji Decode:
+      div.form
+        input(type="text" name="decode" value="" placeholder="emoji or text")
+        input.decode(type="submit" value="Submit")
+      div.form
+        Label Translation:
+        output.results(type="text" name="decode" value="" placeholder="emoji or text")
+

@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+
+div.form {
+  margin: 24px;
+  text-align: center;
+}
+
+p.form, h1.form {
+  margin: 24px;
+  text-align: center;
+}
+
+i.form {
+  left:200px;
+  right:200px;
+}
