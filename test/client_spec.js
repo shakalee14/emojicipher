@@ -2,10 +2,16 @@ import mocha from 'mocha'
 import chai from 'chai'
 import expect from 'expect'
 
-import {getAllLetters} from '../src/client.js'
+import {decode} from '../src/client.js'
 
-describe ('getAllLetters', () => {
-  it('does what its supposed to', () => {
-    expect (getAllLetters()).toEqual()
+describe ('decode', () => {
+  it('outputs the corresponding emoji string when the input is text', () => {
+    expect (decode()).toEqual()
+  })
+  it('outputs an error message when the input is not text or emoji', () => {
+    expect (decode()).toEqual()
+  })
+  it('outputs the corresponding text string when the input are emojis', () => {
+    expect (decode()).toEqual()
   })
 })

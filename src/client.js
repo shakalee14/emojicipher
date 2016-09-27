@@ -1,7 +1,20 @@
-var emoji = require('node-emoji');
+const emoji = require('node-emoji');
 
-console.log(emoji.get('fist-skin-tone-5'));
+console.log(emoji.get('blackbaby'));
 
-var emojiAlphabet = {
-  'em em-bowtie': 'a', 'em em-laughing': 'b', 'em em-relaxed': 'c'
+import { emojiAlphabet } from '../src/emojiAlphabet.js'
+
+
+export const decode = (str) => {
+  const convertedstr = 'flamingo'
+
+  if (convertedstr[0].charCodeAt()>96 && convertedstr[0].charCodeAt()<122) {
+    convertedstr[0] = String.fromCharCode(emojiAlphabet[0])
+
+    str = convertedstr.join("")
+    console.log('str')
+  }
+  return str
 }
+
+
