@@ -3,33 +3,26 @@ import chai from 'chai'
 import expect from 'expect'
 const emoji = require('node-emoji')
 
-import {decode} from '../src/client.js'
+import {encode} from '../src/encode.js'
 
-const emojiAlph = '💯'
+const textAlph2 = 'AbcDefghijklmnopqrstuvwxyz'
 
-const emojiAlpha = {
- a:emoji.get('blackboy'), b:emoji.get('blackbaby'), c:emoji.get('blackprincess')}
+const emojiStringAZ = '💯👦🏿👽✡✨♑️♒️♐️♠️♥️◀️☪👶🏿☯🚀👧🏿👨🏿👸🏿✊🏿✋🏿⛰⛩♊️⛎🍉🔥'
 
-console.log(Object.keys(emojiAlph))
-console.log(Object.keys(emojiAlpha))
-
-const textAlph = 'abc'
-
-console.log(Object.keys(textAlph))
-
-
-describe ('decode', () => {
-  it('outputs the corresponding emoji string when the input is text', () => {
-    expect (decode(textAlph)).toEqual('💯bc')
+describe ('encode', () => {
+  it('outputs the corresponding emoji alphabet when the input is the alphabet', () => {
+    expect (encode(textAlph2)).toEqual('💯👦🏿👽✡✨♑️♒️♐️♠️♥️◀️☪👶🏿☯🚀👧🏿👨🏿👸🏿✊🏿✋🏿⛰⛩♊️⛎🍉🔥')
   })
-  it('outputs an error message when the input is not text or emoji', () => {
-    expect (decode('abc')).toEqual('💯👦🏿👽')
+  it('outputs the corresponding emoji string when the input is a string', () => {
+    expect (encode('abc')).toEqual('💯👦🏿👽')
   })
-  it('outputs the corresponding text string when the input are emojis', () => {
-    expect (decode()).toEqual()
+  it('outputs the corresponding emoji string when the input is a string', () => {
+    expect (encode('mno')).toEqual('👶🏿☯🚀')
   })
-
-  it('outputs the emojis for ABC when the input is an abc string', () => {
-    expect (decode('abc')).toEqual(emojiAlphAZ)
+  it('outputs the corresponding emoji string when the input is a string', () => {
+    expect (encode('shAka')).toEqual('✊🏿♐💯◀💯')
+  })
+  it('outputs the corresponding emoji string when the input is a string', () => {
+    expect (encode('Najee')).toEqual('☯💯♥✨✨')
   })
 })
