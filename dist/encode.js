@@ -53,6 +53,8 @@ exports.default = function (code) {
     }).join('');
   };
 };
+
+export default code 
 // take text, replace each letter with a corresponding emoji
 //look at each letter,
 // replace letter with corresponding emoji index
