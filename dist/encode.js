@@ -3,33 +3,44 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.encode = undefined;
+
+var _nodeEmoji = require('node-emoji');
+
+var _graphemeSplitter = require('../vendor/grapheme-splitter');
+
+var _graphemeSplitter2 = _interopRequireDefault(_graphemeSplitter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var _ = require('lodash');
+
 
 var emojiAlph = {
   a: '💯',
-  b: '👦🏿',
+  b: '☕',
   c: '👽',
   d: '✡',
   e: '✨',
-  f: '♑',
-  g: '️♒',
-  h: '️♐',
-  i: '️♠',
-  j: '️♥',
-  k: '️◀',
-  l: '️☪',
-  m: '👶🏿',
+  f: '♑️',
+  g: '⌨',
+  h: '⚡',
+  i: '⚽️',
+  j: '⛑',
+  k: '⛪️',
+  l: '⭐',
+  m: '🃏',
   n: '☯',
   o: '🚀',
-  p: '👧🏿',
-  q: '👨🏿',
-  r: '👸🏿',
-  s: '✊🏿',
-  t: '✋🏿',
+  p: '🌂',
+  q: '🌄',
+  r: '🌈',
+  s: '🌊',
+  t: '🌍',
   u: '⛰',
   v: '⛩',
-  w: '♊',
-  x: '️⛎',
+  w: '♊️',
+  x: '⛎',
   y: '🍉',
   z: '🔥'
 };

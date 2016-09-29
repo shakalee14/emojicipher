@@ -7,22 +7,22 @@ import {encode} from '../src/encode.js'
 
 const textAlph2 = 'AbcDefghijklmnopqrstuvwxyz'
 
-const emojiStringAZ = '💯👦🏿👽✡✨♑️♒️♐️♠️♥️◀️☪👶🏿☯🚀👧🏿👨🏿👸🏿✊🏿✋🏿⛰⛩♊️⛎🍉🔥'
+const emojiStringAZ = '💯☕👽✡✨♑️⌨⚡⚽️⛑⛪️⭐🃏☯🚀🌂🌄🌈🌊🌍⛰⛩♊️⛎🍉🔥'
 
 describe ('encode', () => {
   it('outputs the corresponding emoji alphabet when the input is the alphabet', () => {
-    expect (encode(textAlph2)).toEqual('💯👦🏿👽✡✨♑️♒️♐️♠️♥️◀️☪👶🏿☯🚀👧🏿👨🏿👸🏿✊🏿✋🏿⛰⛩♊️⛎🍉🔥')
+    expect (encode(textAlph2)).toEqual(emojiStringAZ)
   })
   it('outputs the corresponding emoji string when the input is a string', () => {
-    expect (encode('abc')).toEqual('💯👦🏿👽')
+    expect (encode('abc')).toEqual('💯☕👽')
   })
   it('outputs the corresponding emoji string when the input is a string', () => {
-    expect (encode('mno')).toEqual('👶🏿☯🚀')
+    expect (encode('mno')).toEqual('🃏☯🚀')
   })
   it('outputs the corresponding emoji string when the input is a string', () => {
-    expect (encode('shAka')).toEqual('✊🏿♐💯◀💯')
+    expect (encode('shAka')).toEqual('🌊⚡💯⛪️💯')
   })
   it('outputs the corresponding emoji string when the input is a string', () => {
-    expect (encode('Najee')).toEqual('☯💯♥✨✨')
+    expect (encode('Najee')).toEqual('☯💯⛑✨✨')
   })
 })
