@@ -13,6 +13,7 @@
     "build:watch": "npm run build -- --watch",
     "build": "babel src -d dist",
     "restart": "mocha --recursive --watch --require babel-register && node ./bin/www"
+    
   },
   "dependencies": {
     "babel": "^6.5.2",
