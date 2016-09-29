@@ -1,17 +1,31 @@
-// module.exports = {
-//     entry: [
-//     'webpack/hot/dev-server'
-//     'webpack-hot-middleware/client'
-//     "#{__dirname}/./views/layout.pug"
-//     ]
-//     output: {
-//         path: __dirname,
-//         publicpath: 'http://localhost:5000/scripts/',
-//         filename: "app.js"
-//     },
-//     module: {
-//         loaders: [
-//             { test: /\.css$/, loader: "style!css" }
-//         ]
-//     }
-// };
+var path = require('path');
+var webpack = require('webpack');
+
+module.exports = {
+  entry: [
+    __dirname+'/src/browser.js'
+  ],
+  output: {
+    publicPath: '/',
+    path: __dirname+'/public',
+    filename: 'browser.js'
+  },
+  debug: true,
+  devtool: 'source-map',
+  module: {
+    loaders: [
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+      },
+      { 
+        test: /\.js$/,
+        include: __dirname+'/src',
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  }
+};

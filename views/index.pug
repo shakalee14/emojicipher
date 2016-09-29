@@ -2,32 +2,17 @@ extends layout
 
 block content
 
-  
-  h1.form= title
-  p.form
-  p.form ♊✨ ☪🚀⛩✨ 🍉🚀⛰
-  p.form "We Love You"
+  .text-align-center
+    h1= title
+    p
+    p ♊✨ ☪🚀⛩✨ 🍉🚀⛰
+    p "We Love You"
 
-  if clicked
-    p.form Encode
-    form.form(oninput='encode()')
-      input.form(type='text', name='form')
+    .inputs
       div
-      input.button(type='button' value='encode')
-      |  : 
-      output.form(name='output', for='form', form='foo' onoutput='encode()')
-
-  else
-
-    p.form Decode
-    form.form(oninput='decode()')
-      input.form(type='text', name='form')
+        input.decoded-input(type='text')
       div
-      input.button(type='button' value='encode')
-      |  : 
-      output.form(name='output', for='form', form='foo' onoutput='encode()')
-
-
+        input.encoded-input(type='text')
 
 
 

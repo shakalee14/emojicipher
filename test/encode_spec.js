@@ -3,7 +3,7 @@ import chai from 'chai'
 import expect from 'expect'
 const emoji = require('node-emoji')
 
-import {encode} from '../src/encode.js'
+import encode from '../src/encode.js'
 
 const textAlph2 = 'AbcDefghijklmnopqrstuvwxyz'
 
@@ -24,5 +24,8 @@ describe ('encode', () => {
   })
   it('outputs the corresponding emoji string when the input is a string', () => {
     expect (encode('Najee')).toEqual('☯💯⛑✨✨')
+  })
+  it('outputs the corresponding emoji string when the input has spaces', () => {
+    expect (encode('i love you')).toEqual('⚽️ ⭐🚀⛩✨ 🍉🚀⛰')
   })
 })
