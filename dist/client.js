@@ -1,5 +1,9 @@
 'use strict';
 
-var emoji = require('node-emoji');
+var input = document.querySelector('#my-text-box');
 
-console.log(emoji.get('blackbaby'));
+var messages = document.querySelector('#messages');
+
+input.addEventListener('input', function () {
+    messages.textContent += 'input changed to: ' + input.value + '\n';
+});

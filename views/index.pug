@@ -4,16 +4,21 @@ block content
 
   
   h1.form= title
-  script(src='./src/encode')
   p.form
   p.form ♊✨ ☪🚀⛩✨ 🍉🚀⛰
   p.form "We Love You"
 
+  if detected
+
+
+
+  else
+
   p.form Encode
   form.form(oninput='encode()')
-    input.form(type='text', name='string1')
+    input.form(type='text', name='form')
     |  : 
-    output.form(name='output', for='string1', form='foo')
+    output.form(name='output', for='form', form='foo' onoutput='encode()')
 
 
 
