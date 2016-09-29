@@ -12,7 +12,7 @@ div.form {
   text-align: center;
 }
 
-p.form, h1.form {
+p.form, h1.form, form.form, label.form {
   margin: 24px;
   text-align: center;
 }

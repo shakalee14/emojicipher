@@ -1,39 +1,29 @@
 extends layout
 
 block content
+
+  
   h1.form= title
   p.form
-    i(class="em em-coffee")
-    i(class="em em-alien")
-    i(class="em em-coffee")
-    i(class="em em-alien")
-    i(class="em em-coffee")
-    i(class="em em-alien")
-    i(class="em em-alien")
-    i(class="em em-alien")
+  p.form ♊✨ ☪🚀⛩✨ 🍉🚀⛰
   p.form "We Love You"
 
-  if textDetected 
+  if detected
 
-    form.encode
-      div.form
-        Label Emoji Encode:
-      div.form
-        input(type="text" name="encode" value="" placeholder="emoji or text")
-        input.encode(type="submit" value="Submit")
-      div.form
-        Label Translation:
-        output.results(type="text" name="encode" value="" placeholder="emoji or text")
 
-  else 
 
-    form.decode
-      div.form
-        Label Emoji Decode:
-      div.form
-        input(type="text" name="decode" value="" placeholder="emoji or text")
-        input.decode(type="submit" value="Submit")
-      div.form
-        Label Translation:
-        output.results(type="text" name="decode" value="" placeholder="emoji or text")
+  else
+
+  p.form Encode
+  form.form(oninput='encode()')
+    input.form(type='text', name='form')
+    |  : 
+    output.form(name='output', for='form', form='foo' onoutput='encode()')
+
+
+
+
+
+
+
 
