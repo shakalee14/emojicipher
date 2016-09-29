@@ -3,7 +3,7 @@ import chai from 'chai'
 import expect from 'expect'
 const emoji = require('node-emoji')
 
-import {encode} from '../src/encode.js'
+import encode from '../src/encode.js'
 
 const textAlph2 = 'AbcDefghijklmnopqrstuvwxyz'
 

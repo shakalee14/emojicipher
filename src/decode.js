@@ -1,8 +1,6 @@
-const _ = require('lodash')
-import { get as getEmoji } from 'node-emoji'
 import GraphemeSplitter from '../vendor/grapheme-splitter'
 
-const splitter = new GraphemeSplitter()
+
 
 const emojiAlph = {
   a:'💯',
@@ -39,7 +37,8 @@ for ( let key in emojiAlph){
   alphEmoji[emojiAlph[key]] = key
 }
 
-export const decode = ( emojiInput ) => {
+const decode = ( emojiInput ) => {
+  const splitter = new GraphemeSplitter()
   console.log( emojiInput )
   console.log( emojiInput.split('') )
   console.log( splitter.splitGraphemes(emojiInput) )
@@ -48,6 +47,7 @@ export const decode = ( emojiInput ) => {
     .join('')
 }
 
+export default decode
 
 
 
