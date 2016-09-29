@@ -8,7 +8,8 @@ var splitter = new GraphemeSplitter();
 var graphemes = splitter.splitGraphemes(string); 
 
 */
-export default function GraphemeSplitter(){
+
+const GraphemeSplitter = function(){
   var CR = 0,
     LF = 1,
     Control = 2,
@@ -1503,3 +1504,5 @@ export default function GraphemeSplitter(){
   }
   return this;
 }
+
+module.exports = GraphemeSplitter
