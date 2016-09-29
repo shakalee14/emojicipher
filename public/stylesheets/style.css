@@ -63,7 +63,7 @@ p.form {
 }
 
 
-p.form, h1.form, form.form, label.form {
+.text-align-center {
   margin: 24px;
   text-align: center;
 }

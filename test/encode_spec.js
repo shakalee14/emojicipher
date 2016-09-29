@@ -25,4 +25,7 @@ describe ('encode', () => {
   it('outputs the corresponding emoji string when the input is a string', () => {
     expect (encode('Najee')).toEqual('☯💯⛑✨✨')
   })
+  it('outputs the corresponding emoji string when the input has spaces', () => {
+    expect (encode('i love you')).toEqual('⚽️ ⭐🚀⛩✨ 🍉🚀⛰')
+  })
 })

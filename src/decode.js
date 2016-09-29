@@ -1,7 +1,5 @@
 import GraphemeSplitter from '../vendor/grapheme-splitter'
 
-
-
 const emojiAlph = {
   a:'💯',
   b:'☕',
@@ -39,24 +37,9 @@ for ( let key in emojiAlph){
 
 const decode = ( emojiInput ) => {
   const splitter = new GraphemeSplitter()
-  console.log( emojiInput )
-  console.log( emojiInput.split('') )
-  console.log( splitter.splitGraphemes(emojiInput) )
   return splitter.splitGraphemes(emojiInput)
-    .map(char => alphEmoji[char] || '')
+    .map(char => alphEmoji[char] || char)
     .join('')
 }
 
 export default decode
-
-
-
-// find the value from the input
-//return the key
-
-
-
-// take text, replace each letter with a corresponding emoji
-//look at each letter,
-  // replace letter with corresponding emoji index
-//

@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 const emojiAlph = {
   a:'💯',
   b:'☕',
@@ -27,13 +29,9 @@ const emojiAlph = {
   z:'🔥'
 }
 
-
 const encode = ( inputStr ) => {
-  return inputStr
-    .toLowerCase()
-    .split()
-    .map( character => emojiAlph[ character ] )
-    .join('')
+  let lowerStr = inputStr.toLowerCase()
+  return _.map(lowerStr, chr => emojiAlph[ chr ] || chr ).join('')
 }
 
 export default encode
