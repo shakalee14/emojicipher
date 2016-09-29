@@ -1,47 +1,52 @@
 const _ = require('lodash')
+import { get as getEmoji } from 'node-emoji'
+import GraphemeSplitter from '../vendor/grapheme-splitter'
+
+const splitter = new GraphemeSplitter()
 
 const emojiAlph = {
-  a:'💯',
-  b:'👦🏿',
-  c:'👽',
-  d:'✡',
-  e:'✨',
-  f:'♑',
-  g:'️♒',
-  h:'️♐',
-  i:'️♠',
-  j:'️♥',
-  k:'️◀',
-  l:'️☪',
-  m:'👶🏿',
-  n:'☯',
-  o:'🚀',
-  p:'👧🏿',
-  q:'👨🏿',
-  r:'👸🏿',
-  s:'✊🏿',
-  t:'✋🏿',
-  u:'⛰',
-  v:'⛩',
-  w:'♊',
-  x:'️⛎',
-  y:'🍉',
-  z:'🔥'
+  a:getEmoji('100'),
+  b:getEmoji('blackboy'),
+  c:getEmoji('alien'),
+  d:getEmoji('star_of_david'),
+  e:getEmoji('sparkles'),
+  f:getEmoji('capricorn'),
+  g:getEmoji('️aquarius'),
+  h:getEmoji('️sagittarius'),
+  i:getEmoji('️spades'),
+  j:getEmoji('️hearts'),
+  k:getEmoji('️arrow_backward'),
+  l:getEmoji('star_and_crescent'),
+  m:getEmoji('blackbaby'),
+  n:getEmoji('yin_yang'),
+  o:getEmoji('rocket'),
+  p:getEmoji('blackgirl'),
+  q:getEmoji('blackman'),
+  r:getEmoji('blackprincess'),
+  s:getEmoji('blackfist'),
+  t:getEmoji('blackraised_hand'),
+  u:getEmoji('mountain'),
+  v:getEmoji('shinto_shrine'),
+  w:getEmoji('gemini'),
+  x:getEmoji('️ophiuchus'),
+  y:getEmoji('watermelon'),
+  z:getEmoji('fire')
 }
+
 
 const alphEmoji = {}
 
 for ( let key in emojiAlph){
   alphEmoji[emojiAlph[key]] = key
 }
-console.log('emojiAlph:', emojiAlph)
-console.log('alphEmoji:', alphEmoji)
 
 export const decode = ( emojiInput ) => {
-  return emojiInput.split('').map(char => {
-    console.log('source:', char, 'target:', alphEmoji[char])
-    alphEmoji[char] || ''
-  }).join('')
+  console.log( emojiInput )
+  console.log( emojiInput.split('') )
+  console.log( splitter.splitGraphemes(emojiInput) )
+  return splitter.splitGraphemes(emojiInput)
+    .map(char => alphEmoji[char] || '')
+    .join('')
 }
 
 
