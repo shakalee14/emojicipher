@@ -8,17 +8,24 @@ block content
   p.form ♊✨ ☪🚀⛩✨ 🍉🚀⛰
   p.form "We Love You"
 
-  if detected
-
-
+  if clicked
+    p.form Encode
+    form.form(oninput='encode()')
+      input.form(type='text', name='form')
+      div
+      input.button(type='button' value='encode')
+      |  : 
+      output.form(name='output', for='form', form='foo' onoutput='encode()')
 
   else
 
-  p.form Encode
-  form.form(oninput='encode()')
-    input.form(type='text', name='form')
-    |  : 
-    output.form(name='output', for='form', form='foo' onoutput='encode()')
+    p.form Decode
+    form.form(oninput='decode()')
+      input.form(type='text', name='form')
+      div
+      input.button(type='button' value='encode')
+      |  : 
+      output.form(name='output', for='form', form='foo' onoutput='encode()')
 
 
 

@@ -1,7 +1,10 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 125px;
+  font-family: "Yatra One", Arial, sans-serif;
+  background-image: url('http://img.wallpaperfolder.com/f/438E792BECA5/38-egypt-ancient-1920x1200-53042.jpg') ;
+  background-size: 70%;
 }
+
 
 a {
   color: #00B7FF;
@@ -11,6 +14,47 @@ div.form {
   margin: 24px;
   text-align: center;
 }
+
+
+h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px white;
+  font-weight: bold;
+  -webkit-animation: mymove 3s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 3s infinite;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-family: "Yatra One";
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  50% {text-shadow: 10px 20px 30px black;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  50% {text-shadow: 10px 20px 30px black;}
+}
+
+h1:hover {
+  font-size: 60px;
+
+}
+
+p {
+  font-size: 30px;
+}
+
 
 p.form, h1.form, form.form, label.form {
   margin: 24px;
