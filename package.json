@@ -55,6 +55,7 @@
     "nodemon": "^1.10.2",
     "serve-favicon": "^2.3.0",
     "webpack": "^1.13.2",
+    "webpack-core": "^0.6.8",
     "webpack-dev-server": "^1.16.1"
   }
 }
