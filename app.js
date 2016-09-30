@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var emoji = require('node-emoji');
-var webpack = require ('webpack');
+
 
 
 var routes = require('./routes/index');
