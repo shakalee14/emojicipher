@@ -25,7 +25,7 @@ A cipher is "a secret or disguised way of writing; a code" (source: [Google](htt
 - [x] Exported functions can encode and decode alphanumeric characters to/from emoji.
 - [x] Test Driven Development
 - [x] Interface is user friendly and attractive
-- [x] Deployed to <ahref='https://emojicipher.herokuapp.com/'>Heroku </a> 
+- [x] Deployed to <a href='https://emojicipher.herokuapp.com/'>Heroku </a> 
 - [x] All source code is written using ECMAScript 2015 syntax.
 - [x] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
