@@ -47,6 +47,14 @@ input {
   font-size: 24px;
 }
 
+.text-align-center2 {
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(60, 172, 224, .37);
+}
+
 div.footer {
   position: fixed;
   width: 100%;
