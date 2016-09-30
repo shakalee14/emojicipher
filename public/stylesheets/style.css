@@ -42,7 +42,9 @@ h1:hover {
 input {
   padding: 14px;
   font-size: 24px;
+ "good try"
 }
+
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
@@ -66,11 +68,12 @@ p.form {
 .text-align-center {
   margin: 24px;
   text-align: center;
+  font-size: 24px;
 }
 
 
 div.footer {
-  position: relative;
+  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
